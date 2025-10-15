@@ -64,9 +64,14 @@ button {
   font-size: 3rem;
   padding: 1rem 3rem;
   cursor: pointer;
+  border: none;
   flex-grow: 1;
   flex-shrink: 0;
   flex-basis: 30%;
   background-color: black;
   color: white;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
