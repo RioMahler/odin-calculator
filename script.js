@@ -11,7 +11,8 @@ let calculation = [];
 
 function operate(button) {
   if (
-    button.target.innerText == "=" ||
+    (button.target.innerText == "=" &&
+      calculation[calculation.length - 1] != " ") ||
     (button.target.classList == "operators" &&
       (calculation.includes("÷") ||
         calculation.includes("+") ||
@@ -66,10 +67,12 @@ function operate(button) {
     calculation.push(button.target.innerText);
     calculation.push(" ");
     display.innerText = calculation.join("");
-  } else if (button.target.classList != "operators") {
+  } else if (
+    button.target.classList != "operators" &&
+    button.target.innerText != "="
+  ) {
     calculation.push(button.target.innerText);
     display.innerText = calculation.join("");
-    console.log(calculation);
   } else return;
 }
 
