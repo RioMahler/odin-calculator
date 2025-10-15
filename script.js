@@ -1,4 +1,5 @@
 let buttons = document.querySelectorAll("button");
+let display = document.querySelector("p");
 
 buttons.forEach((button) => button.addEventListener("click", operate));
 

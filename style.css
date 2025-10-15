@@ -42,6 +42,11 @@ p {
   gap: 1rem;
 }
 
+#clear {
+  flex-grow: 0;
+  flex-shrink: 1;
+}
+
 #operators {
   display: flex;
   flex-direction: column;
